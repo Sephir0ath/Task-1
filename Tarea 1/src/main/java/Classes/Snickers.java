@@ -1,6 +1,5 @@
 package Classes;
-
-
+import Classes.Dulce;
 
 public class Snickers extends Dulce {
     public Snickers(int serie){
