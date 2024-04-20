@@ -9,11 +9,13 @@ public class Comprador {
     private int vuelto;
     public Comprador(Moneda moneda, Productos cualProducto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
         sonido = expendedor.comprarProducto(moneda, cualProducto).comer();
+
         while(true) {
             Moneda monedaAObtener = expendedor.getVuelto();
             if (monedaAObtener == null){
                 break;
             }
+
             vuelto += monedaAObtener.getValor();
         }
     }
