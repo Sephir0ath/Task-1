@@ -17,6 +17,7 @@ public abstract class Moneda implements Comparable<Moneda>{
             return 0;
         }
     }
+
     public abstract int getValor();
 
 }
