@@ -1,6 +1,6 @@
 package Classes;
 
-public class Moneda1500 {
+public class Moneda1500 extends Moneda{
     public Moneda1500(){
         super();
     }
