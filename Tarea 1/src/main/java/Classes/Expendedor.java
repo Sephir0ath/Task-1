@@ -49,7 +49,78 @@ public class Expendedor {
 
                 return depositoCoca.get();
             }
+        }
 
+        if (cualProducto == Productos.FANTA) {
+            cantidadDeMonedasVuelto = (moneda.getValor() - PrecioProductos.VALORFANTA.getPrecio()) / 100;
+            if (depositoFanta.returnArrayList().isEmpty()) {
+                throw new NoHayProductoException();
+            }
+
+            if (cantidadDeMonedasVuelto < 0) {
+                throw new PagoInsuficienteException();
+            } else {
+                depositoMonedas.get();
+                for (int i = 0; i < cantidadDeMonedasVuelto; i++) {
+                    depositoMonedas.add(new Moneda100());
+                }
+
+                return depositoFanta.get();
+            }
+        }
+
+        if (cualProducto == Productos.SPRITE) {
+            cantidadDeMonedasVuelto = (moneda.getValor() - PrecioProductos.VALORSPRITE.getPrecio()) / 100;
+            if (depositoSprite.returnArrayList().isEmpty()) {
+                throw new NoHayProductoException();
+            }
+
+            if (cantidadDeMonedasVuelto < 0) {
+                throw new PagoInsuficienteException();
+            } else {
+                depositoMonedas.get();
+                for (int i = 0; i < cantidadDeMonedasVuelto; i++) {
+                    depositoMonedas.add(new Moneda100());
+                }
+
+                return depositoSprite.get();
+            }
+        }
+
+        if (cualProducto == Productos.SUPER8) {
+            cantidadDeMonedasVuelto = (moneda.getValor() - PrecioProductos.VALORSUPER8.getPrecio()) / 100;
+            if (depositoSuper8.returnArrayList().isEmpty()) {
+                throw new NoHayProductoException();
+            }
+
+            if (cantidadDeMonedasVuelto < 0) {
+                throw new PagoInsuficienteException();
+            } else {
+                depositoMonedas.get();
+                for (int i = 0; i < cantidadDeMonedasVuelto; i++) {
+                    depositoMonedas.add(new Moneda100());
+                }
+
+                return depositoSuper8.get();
+            }
+        }
+
+        if (cualProducto == Productos.SNICKERS) {
+            cantidadDeMonedasVuelto = (moneda.getValor() - PrecioProductos.VALORSNICKERS.getPrecio()) / 100;
+            if (depositoSnickers.returnArrayList().isEmpty()) {
+                throw new NoHayProductoException();
+            }
+
+            if (cantidadDeMonedasVuelto < 0) {
+                throw new PagoInsuficienteException();
+            } else {
+                depositoMonedas.get();
+                for (int i = 0; i < cantidadDeMonedasVuelto; i++) {
+                    depositoMonedas.add(new Moneda100());
+                }
+
+                return depositoSnickers.get();
+            }
         }
 
         else {
