@@ -19,9 +19,11 @@ public class Comprador {
             vuelto += monedaAObtener.getValor();
         }
     }
+
     public int cuantoVuelto() {
         return vuelto;
     }
+
     public String queComiste() {
         return sonido;
     }
