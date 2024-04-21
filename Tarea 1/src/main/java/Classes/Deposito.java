@@ -1,13 +1,24 @@
 package Classes;
 import java.util.ArrayList;
 
+/**
+ *
+ * @param <T>
+ */
 public class Deposito<T> {
     ArrayList<T> deposito;
 
+    /**
+     *
+     */
     public Deposito(){
         deposito = new ArrayList<>();
     }
 
+    /**
+     *
+     * @return
+     */
     public T get(){
         if (deposito.isEmpty()){
             return null;
@@ -18,10 +29,18 @@ public class Deposito<T> {
         return objetoQueSeRetorna;
     }
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<T> returnArrayList(){
         return deposito;
     }
 
+    /**
+     *
+     * @param objeto
+     */
     public void add(T objeto){
         deposito.add(objeto);
     }

@@ -1,5 +1,8 @@
 package Classes;
 
+/**
+ *
+ */
 public enum PrecioProductos {
     VALORCOCACOLA(1000),
     VALORSPRITE(800),
@@ -9,10 +12,18 @@ public enum PrecioProductos {
 
     private final int precio;
 
+    /**
+     *
+     * @param precio
+     */
     private PrecioProductos(int precio){
         this.precio = precio;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getPrecio(){
        return precio;
     }

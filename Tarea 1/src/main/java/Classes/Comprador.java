@@ -4,9 +4,23 @@ import Excepciones.NoHayProductoException;
 import Excepciones.PagoIncorrectoException;
 import Excepciones.PagoInsuficienteException;
 
+/**
+ *
+ */
 public class Comprador {
     private String sonido;
     private int vuelto;
+
+    /**
+     *
+     *
+     * @param moneda
+     * @param cualProducto
+     * @param expendedor
+     * @throws NoHayProductoException
+     * @throws PagoInsuficienteException
+     * @throws PagoIncorrectoException
+     */
     public Comprador(Moneda moneda, Productos cualProducto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
         sonido = expendedor.comprarProducto(moneda, cualProducto).comer();
 
@@ -20,10 +34,18 @@ public class Comprador {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int cuantoVuelto() {
         return vuelto;
     }
 
+    /**
+     *
+     * @return
+     */
     public String queComiste() {
         return sonido;
     }

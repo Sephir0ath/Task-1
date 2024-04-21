@@ -4,11 +4,18 @@ import Excepciones.NoHayProductoException;
 import Excepciones.PagoIncorrectoException;
 import Excepciones.PagoInsuficienteException;
 
+/**
+ *
+ */
 public class Expendedor {
     private Deposito<Bebida> depositoCoca = new Deposito<>(), depositoFanta = new Deposito<>(), depositoSprite = new Deposito<>();
     private Deposito<Dulce> depositoSnickers = new Deposito<>(), depositoSuper8 = new Deposito<>();
     private Deposito<Moneda> depositoMonedas = new Deposito<>();
 
+    /**
+     *
+     * @param cantidadProductos
+     */
     public Expendedor(int cantidadProductos) {
         for (int i = 0; i < cantidadProductos; i++) {
             depositoCoca.add(new CocaCola(100 + i));
@@ -19,6 +26,15 @@ public class Expendedor {
         }
     }
 
+    /**
+     *
+     * @param moneda
+     * @param cualProducto
+     * @return
+     * @throws PagoIncorrectoException
+     * @throws PagoInsuficienteException
+     * @throws NoHayProductoException
+     */
     public Producto comprarProducto(Moneda moneda, Productos cualProducto) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
         int cantidadDeMonedasVuelto;
 
@@ -128,6 +144,10 @@ public class Expendedor {
         }
     }
 
+    /**
+     * 
+     * @return
+     */
     public Moneda getVuelto(){
         return depositoMonedas.get();
     }

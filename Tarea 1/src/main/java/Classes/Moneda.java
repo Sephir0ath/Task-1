@@ -1,12 +1,25 @@
 package Classes;
 
+/**
+ *
+ *
+ */
 public abstract class Moneda implements Comparable<Moneda>{
+    /**
+     *
+     *
+     */
     public Moneda(){}
 
     public Moneda getSerie(){
         return this;
     }
 
+    /**
+     *
+     * @param moneda the object to be compared.
+     * @return
+     */
     @Override
     public int compareTo(Moneda moneda) {
         if (this.getValor() == moneda.getValor()){
@@ -18,6 +31,10 @@ public abstract class Moneda implements Comparable<Moneda>{
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public abstract int getValor();
 
 }
