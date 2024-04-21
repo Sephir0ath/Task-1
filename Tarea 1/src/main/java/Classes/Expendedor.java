@@ -5,7 +5,7 @@ import Excepciones.PagoIncorrectoException;
 import Excepciones.PagoInsuficienteException;
 
 /**
- *
+ * Clase que simula un expendedor, aquí se guardan varios depositos en donde el usuario podrá cocmprar productos
  */
 public class Expendedor {
     private Deposito<Bebida> depositoCoca = new Deposito<>(), depositoFanta = new Deposito<>(), depositoSprite = new Deposito<>();
@@ -13,8 +13,9 @@ public class Expendedor {
     private Deposito<Moneda> depositoMonedas = new Deposito<>();
 
     /**
+     * Constructor de la clase Expendedor, añade una cierta cantidad de productos a cada dispensador
      *
-     * @param cantidadProductos
+     * @param cantidadProductos valor que indica la cantidad de elementos que tiene cada dispensador
      */
     public Expendedor(int cantidadProductos) {
         for (int i = 0; i < cantidadProductos; i++) {
@@ -27,13 +28,14 @@ public class Expendedor {
     }
 
     /**
+     * Metodo para comprar un producto, se verifica que el ingreso de las variables sea correcto
      *
-     * @param moneda
-     * @param cualProducto
-     * @return
-     * @throws PagoIncorrectoException
-     * @throws PagoInsuficienteException
-     * @throws NoHayProductoException
+     * @param moneda Moneda que se recibe para pagar un producto
+     * @param cualProducto Valor que permite saber qué producto se quiere comprar
+     * @return Se retorna el producto pedido por el comprador
+     * @throws PagoIncorrectoException Se lanza cuando moneda es vacío (null)
+     * @throws PagoInsuficienteException Se lanza cuando el valor de la moneda ingresada es menor al precio de los productos
+     * @throws NoHayProductoException Se lanza cuando el deposito del producto vacío está vacío
      */
     public Producto comprarProducto(Moneda moneda, Productos cualProducto) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
         int cantidadDeMonedasVuelto;
@@ -145,8 +147,9 @@ public class Expendedor {
     }
 
     /**
-     * 
-     * @return
+     *  Metodo para devolver una moneda para calcular el vuelto del usuario en la clase comprador
+     *
+     * @return retorna la primera moneda de depositoMonedas
      */
     public Moneda getVuelto(){
         return depositoMonedas.get();
