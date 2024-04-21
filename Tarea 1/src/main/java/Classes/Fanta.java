@@ -6,7 +6,7 @@ import Classes.Bebida;
  */
 public class Fanta extends Bebida {
     /**
-     *
+     * Constructor por defecto
      * @param serie Recibe el numero de serie del producto
      */
     public Fanta(int serie){
@@ -14,8 +14,8 @@ public class Fanta extends Bebida {
     }
 
     /**
-     *
-     * @return Retorna "Fanta" al ser tomada, correspondiente a la marca de la Bebida
+     * Método que representa que el producto fue consumido
+     * @return Retorna "Fanta" al ser consumida, correspondiente a la marca de la Bebida
      */
     @Override
     public String comer(){

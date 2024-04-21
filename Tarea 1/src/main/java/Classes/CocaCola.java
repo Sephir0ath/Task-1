@@ -5,7 +5,7 @@ package Classes;
  */
 public class CocaCola extends Bebida {
     /**
-     *
+     * Constructor por defecto
      * @param serie Recibe el numero de serie del producto
      */
     public CocaCola(int serie){
@@ -13,8 +13,8 @@ public class CocaCola extends Bebida {
     }
 
     /**
-     *
-     * @return Retorna "CocaCola" al ser tomada, correspondiente a la marca de la Bebida
+     * Método que representa que el producto fue consumido
+     * @return Retorna "CocaCola" al ser consumida, correspondiente a la marca de la Bebida
      */
     @Override
     public String comer(){
