@@ -8,7 +8,7 @@ public class Super8 extends Dulce {
     /**
      * Constructor de la clase, inicializa la variable serie
      *
-     * @param serie
+     * @param serie valor que representa un identificador unico para cada objeto Snickers
      */
     public Super8(int serie){
         super(serie);
