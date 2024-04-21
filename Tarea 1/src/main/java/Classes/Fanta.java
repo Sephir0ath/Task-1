@@ -2,12 +2,12 @@ package Classes;
 import Classes.Bebida;
 
 /**
- *
+ * Fanta Subclase de Bebida
  */
 public class Fanta extends Bebida {
     /**
      *
-     * @param serie
+     * @param serie Recibe el numero de serie del producto
      */
     public Fanta(int serie){
         super(serie);
@@ -15,7 +15,7 @@ public class Fanta extends Bebida {
 
     /**
      *
-     * @return
+     * @return Retorna "Fanta" al ser tomada, correspondiente a la marca de la Bebida
      */
     @Override
     public String comer(){
