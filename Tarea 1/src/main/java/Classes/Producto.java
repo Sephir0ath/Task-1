@@ -7,7 +7,7 @@ public abstract class Producto {
     private int serie;
 
     /**
-     *
+     * Constructor por defecto
      * @param serie Recibe el numero de serie del producto
      */
     public Producto(int serie){
@@ -15,7 +15,7 @@ public abstract class Producto {
     }
 
     /**
-     *
+     * Método para obtener el número de serie del producto
      * @return serie Retorna el numero de serie del producto
      */
     public int getSerie(){
@@ -23,7 +23,7 @@ public abstract class Producto {
     }
 
     /**
-     *
+     * Método abstracto que representa que el producto fue consumido
      * @return Retorna un String con el nombre del producto al ser usado
      */
     public abstract String comer();
