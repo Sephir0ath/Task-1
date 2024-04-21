@@ -8,10 +8,12 @@ import Excepciones.PagoInsuficienteException;
  * Esta clase representa al Comprador el cual interactúa con el Expendedor y compra el producto
  */
 public class Comprador {
+
     /**
      * String ya que almacenará el nombre del producto consumido
      */
     private String sonido;
+
     /**
      * Int que contendrá el valor numérico de la cantidad de dinero devuelto
      */
@@ -28,6 +30,7 @@ public class Comprador {
      */
     public Comprador(Moneda moneda, Productos cualProducto, Expendedor expendedor) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
         sonido = expendedor.comprarProducto(moneda, cualProducto).comer();
+
         /**
          * Ciclo que calcula la cantidad de vuelto
          * Se ejecutará mientras aún haya vuelto que entregar
