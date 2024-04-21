@@ -2,10 +2,11 @@ package Classes;
 import Classes.Dulce;
 
 /**
- *
+ * Subclase de Dulce, hace referencia al dulce "Super8"
  */
 public class Super8 extends Dulce {
     /**
+     * Constructor de la clase, inicializa la variable serie
      *
      * @param serie
      */
@@ -14,8 +15,9 @@ public class Super8 extends Dulce {
     }
 
     /**
+     * Este metodo indica el producto que se ha consumido al llamarse
      *
-     * @return
+     * @return Un String con la palabra "Super8"
      */
     public String comer() {
         return "Super8";
