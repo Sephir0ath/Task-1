@@ -6,7 +6,7 @@ package Classes;
  */
 public class Moneda1000 extends Moneda{
     /**
-     * Constructo por defecto, crea una instancia de Moneda1000
+     * Constructor por defecto, crea una instancia de Moneda1000
      */
     public Moneda1000(){
         super();
