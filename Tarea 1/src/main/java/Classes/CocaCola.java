@@ -1,12 +1,12 @@
 package Classes;
 
 /**
- *
+ * CocaCola Subclase de Bebida
  */
 public class CocaCola extends Bebida {
     /**
      *
-     * @param serie
+     * @param serie Recibe el numero de serie del producto
      */
     public CocaCola(int serie){
         super(serie);
@@ -14,7 +14,7 @@ public class CocaCola extends Bebida {
 
     /**
      *
-     * @return
+     * @return Retorna "CocaCola" al ser tomada, correspondiente a la marca de la Bebida
      */
     @Override
     public String comer(){
