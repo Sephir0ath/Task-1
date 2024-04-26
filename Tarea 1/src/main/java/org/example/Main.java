@@ -24,7 +24,7 @@ public class Main {
             Comprador com = new Comprador(mon, Productos.SNICKERS, exp);
         }
         catch (Exception error) {
-            System.out.println("ERROR: No haz ingresado una moneda (" + error + ")");
+            System.out.println("ERROR: No has ingresado una moneda (" + error + ")");
         }
 
         // Caso error 3
@@ -37,7 +37,7 @@ public class Main {
         catch (Exception error) {
             System.out.println("ERROR: No ingresaste suficiente dinero (" + error + ")");
 
-
+        }
         // Casos de prueba que funcionan
         // Caso 1: Snickers - Valor snickers: 600
         mon = new Moneda1500();
@@ -58,4 +58,3 @@ public class Main {
         }
     }
 
-}
